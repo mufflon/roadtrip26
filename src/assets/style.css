@@ -412,6 +412,11 @@ select:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
 .sitefoot__note { color: var(--warn); }
 
 /* ----------------------------------------------------------- leaflet bits */
+/* Sea colour behind the map, so with no street tiles (offline) the bundled
+   land basemap reads as land-on-sea rather than sitting on Leaflet's grey.
+   Two classes so it outranks leaflet.css's own .leaflet-container background,
+   which loads after this file. */
+.map.leaflet-container { background: var(--ground-3); }
 .pin {
   font-family: var(--font-code);
   font-weight: 800;

@@ -10,15 +10,19 @@
 
   <link rel="stylesheet" href="{{ '/assets/style.css' | url }}">
 
-  <!-- Leaflet 1.9.4 from CDN. Deferred so it never blocks the list rendering;
-       the page is fully usable if these fail to load. -->
-  <link rel="stylesheet"
-        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-        crossorigin="">
-  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-          crossorigin=""></script>
+  <!-- Installable offline app: manifest + iOS "Add to Home Screen" support. -->
+  <link rel="manifest" href="{{ '/manifest.webmanifest' | url }}">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Roadtrip 26">
+  <link rel="apple-touch-icon" href="{{ '/assets/icon-180.png' | url }}">
+  <link rel="icon" type="image/png" sizes="192x192" href="{{ '/assets/icon-192.png' | url }}">
+
+  <!-- Leaflet 1.9.4, bundled locally so the map works offline and needs no CDN.
+       Deferred so it never blocks the list; the page is usable if it fails. -->
+  <link rel="stylesheet" href="{{ '/assets/leaflet/leaflet.css' | url }}">
+  <script defer src="{{ '/assets/leaflet/leaflet.js' | url }}"></script>
   <script type="module" src="{{ pageScript | url }}"></script>
 </head>
 <body>
@@ -50,5 +54,17 @@
       Opening hours are a snapshot, not a guarantee. Always check before you go.
     </p>
   </footer>
+
+  <!-- Register the service worker so the site installs and works offline.
+       Failure is silent: online, everything works without it. -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker
+          .register("{{ '/sw.js' | url }}", { scope: "{{ '/' | url }}" })
+          .catch(function () {});
+      });
+    }
+  </script>
 </body>
 </html>

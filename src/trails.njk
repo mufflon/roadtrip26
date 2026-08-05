@@ -101,7 +101,7 @@ pageScript: "/assets/app-trails.js"
   </div>
 
   <section class="mapwrap" aria-label="Map of trailheads">
-    <div id="map" class="map" data-json="{{ '/trails.json' | url }}"></div>
+    <div id="map" class="map" data-json="{{ '/trails.json' | url }}" data-basemap="{{ '/assets/basemap.geojson' | url }}"></div>
     <p id="map-status" class="map-status" role="status" hidden></p>
   </section>
 </div>

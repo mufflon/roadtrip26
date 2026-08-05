@@ -1,5 +1,5 @@
 import {
-  loadJSON, wireCopy, makeMap, codeIcon, fitTo, flyOrJump,
+  loadJSON, wireCopy, makeMap, addBasemap, codeIcon, fitTo, flyOrJump,
   whenLeaflet, esc, downloadBlob
 } from "./shared.js";
 
@@ -183,6 +183,7 @@ applySort();
     const map = makeMap(mapEl, statusEl);
     if (!map) return;
     window._rtmap = map;
+    addBasemap(map, mapEl.dataset.basemap);
     const latlngs = [];
 
     data.SITES.forEach((s) => {

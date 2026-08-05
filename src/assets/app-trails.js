@@ -1,5 +1,5 @@
 import {
-  loadJSON, wireCopy, makeMap, codeIcon, fitTo, flyOrJump, whenLeaflet, esc
+  loadJSON, wireCopy, makeMap, addBasemap, codeIcon, fitTo, flyOrJump, whenLeaflet, esc
 } from "./shared.js";
 
 const cards = Array.from(document.querySelectorAll(".card"));
@@ -50,6 +50,7 @@ const markers = new Map();
     const map = makeMap(mapEl, statusEl);
     if (!map) return;
     window._rtmap = map;
+    addBasemap(map, mapEl.dataset.basemap);
     const latlngs = [];
 
     data.TRAILS.forEach((t) => {

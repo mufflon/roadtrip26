@@ -1,0 +1,20 @@
+---
+permalink: "manifest.webmanifest"
+eleventyExcludeFromCollections: true
+---
+{
+  "name": "Budapest → Rostock, Aug 2026",
+  "short_name": "Roadtrip 26",
+  "description": "Field reference for the Budapest–Rostock drive: sites, trails and a map.",
+  "start_url": "{{ '/' | url }}",
+  "scope": "{{ '/' | url }}",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0d2622",
+  "theme_color": "#0e2b2b",
+  "icons": [
+    { "src": "{{ '/assets/icon-192.png' | url }}", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "{{ '/assets/icon-512.png' | url }}", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "{{ '/assets/icon-512.png' | url }}", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

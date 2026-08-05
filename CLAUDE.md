@@ -23,8 +23,9 @@ Both pages share the same layout, styling and map behaviour.
 - **Builds with Eleventy (11ty) v3 and deploys to GitHub Pages via Actions.** See
   "The build" for what it is allowed to buy and what it must not become.
 - **No database, no backend, no API keys.** All data lives in the `content/` YAML.
-- **Leaflet 1.9.4 from CDN with OpenStreetMap tiles.** Not the Google Maps JS API,
-  which needs a billable key. Google is used only for outbound links.
+- **Leaflet 1.9.4 with OpenStreetMap tiles.** Not the Google Maps JS API, which needs a
+  billable key. Google is used only for outbound links. (Leaflet was originally loaded
+  from a CDN; it is now vendored under `src/assets/leaflet/` so the map works offline.)
 - **No localStorage or sessionStorage.**
 - **The YAML in `content/` is the source of truth.** Human-edited, split by country.
   `tools/build-data.mjs` (`./build.sh` / `npm run data`) compiles it into `data/sites.js`
@@ -391,5 +392,13 @@ README along with `npm run check`.
 ## Out of scope
 
 Do not add: routing or trip optimisation, day assignment, weather, EV charging, hotel
-data, a service worker, analytics, or a cookie banner. If any of these seem necessary,
-say so rather than building them.
+data, analytics, or a cookie banner. If any of these seem necessary, say so rather than
+building them.
+
+A service worker was originally listed here as out of scope (to avoid stale-content
+surprises on top of Pages' hard caching). It has since been added deliberately, for
+offline use on a boat trip, with the cache name versioned by build time so every deploy
+replaces the old cache and nothing is served stale. The app is installable to the home
+screen (manifest + icons) and precaches both pages, the data, the bundled Leaflet and the
+offline basemap. `localStorage`/`sessionStorage` remain unused (the Cache API is not
+localStorage).

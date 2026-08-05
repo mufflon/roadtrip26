@@ -76,6 +76,10 @@ export function makeMap(mapEl, statusEl) {
   const L = window.L;
   if (!L || !mapEl) return null;
   const map = L.map(mapEl, { scrollWheelZoom: true });
+  // A pane for the offline basemap, kept below the street-tile pane (z 200)
+  // so the bundled overview shows only where/when tiles are unavailable.
+  map.createPane("basemap");
+  map.getPane("basemap").style.zIndex = 150;
   const tiles = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -88,6 +92,26 @@ export function makeMap(mapEl, statusEl) {
   });
   tiles.addTo(map);
   return map;
+}
+
+// Offline overview basemap: a bundled, public-domain (Natural Earth) countries
+// layer that shows when the OSM street tiles are unreachable. It lives in a pane
+// below the tiles, so online it sits under the streets and offline it *is* the
+// map — coastlines, borders and the markers, enough to orient by.
+export async function addBasemap(map, url) {
+  if (!map || !url || !window.L) return;
+  try {
+    const res = await fetch(url, { cache: "force-cache" });
+    if (!res.ok) return;
+    const gj = await res.json();
+    window.L.geoJSON(gj, {
+      pane: "basemap",
+      interactive: false,
+      // Only ever visible offline (under the street tiles online), so styled for
+      // legibility: land clearly lighter than the sea ground, bright coastlines.
+      style: { color: "#6fb9a8", weight: 1.1, fillColor: "#1f4f47", fillOpacity: 1 }
+    }).addTo(map);
+  } catch { /* no basemap available; the sea-coloured background remains */ }
 }
 
 // A tier-coloured, code-labelled marker. Approximate pins are hollow and dashed.

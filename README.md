@@ -101,6 +101,23 @@ Three things that specifically bite on Pages:
   that appears not to have landed has almost certainly just not propagated yet — wait
   before debugging.
 
+## Offline & install
+
+The site is a PWA. Open the live URL, then **Share → Add to Home Screen** (iOS Safari)
+or install from the browser menu (Android/desktop); it launches full-screen and works
+with **no connection** — a service worker precaches both pages, the data, a
+locally-bundled Leaflet, and an offline overview basemap.
+
+- **Offline:** the whole list (filters, sort, closing-day warnings, notes, hours, codes),
+  the copyable Google/Wikipedia links, and a map with all markers on a bundled
+  public-domain (Natural Earth) coastlines-and-borders basemap.
+- **Needs signal:** detailed OSM *street* tiles (offline you get the overview basemap
+  instead) and actually opening Google Maps / Wikipedia. For real offline navigation,
+  download offline regions in Google Maps, or import the **Download KML** into Organic
+  Maps / OsmAnd before you leave signal.
+- **Staleness:** the SW cache name is versioned by build time, so every deploy replaces
+  the old cache — one reload after a deploy picks up the new version, no stuck-on-old trap.
+
 ## What's deliberately not here
 
 No routing or trip optimisation, no day assignment, no weather, no EV/hotel data, no

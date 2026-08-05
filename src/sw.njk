@@ -1,0 +1,65 @@
+---
+permalink: "sw.js"
+eleventyExcludeFromCollections: true
+---
+// Service worker — precaches the app shell so the site installs to the home
+// screen and works with no connection. The cache name carries the build time,
+// so each deploy activates a fresh cache and the old one is deleted: no stale
+// app, which is the concern that originally kept a service worker out of scope.
+const CACHE = "roadtrip26-{{ build.time }}";
+const ASSETS = [
+  "{{ '/' | url }}",
+  "{{ '/index.html' | url }}",
+  "{{ '/trails.html' | url }}",
+  "{{ '/sites.json' | url }}",
+  "{{ '/trails.json' | url }}",
+  "{{ '/assets/style.css' | url }}",
+  "{{ '/assets/shared.js' | url }}",
+  "{{ '/assets/app-sites.js' | url }}",
+  "{{ '/assets/app-trails.js' | url }}",
+  "{{ '/assets/basemap.geojson' | url }}",
+  "{{ '/assets/leaflet/leaflet.js' | url }}",
+  "{{ '/assets/leaflet/leaflet.css' | url }}",
+  "{{ '/assets/leaflet/images/layers.png' | url }}",
+  "{{ '/assets/leaflet/images/layers-2x.png' | url }}",
+  "{{ '/assets/leaflet/images/marker-icon.png' | url }}",
+  "{{ '/assets/leaflet/images/marker-icon-2x.png' | url }}",
+  "{{ '/assets/leaflet/images/marker-shadow.png' | url }}",
+  "{{ '/manifest.webmanifest' | url }}",
+  "{{ '/assets/icon-180.png' | url }}",
+  "{{ '/assets/icon-192.png' | url }}",
+  "{{ '/assets/icon-512.png' | url }}"
+];
+
+self.addEventListener("install", (e) => {
+  // allSettled: a single missing asset must not abort the whole install.
+  e.waitUntil(
+    caches.open(CACHE)
+      .then((c) => Promise.allSettled(ASSETS.map((u) => c.add(u))))
+      .then(() => self.skipWaiting())
+  );
+});
+
+self.addEventListener("activate", (e) => {
+  e.waitUntil(
+    caches.keys()
+      .then((keys) => Promise.all(keys.filter((k) => k !== CACHE).map((k) => caches.delete(k))))
+      .then(() => self.clients.claim())
+  );
+});
+
+// Cache-first for anything we precached; otherwise go to the network. Offline
+// navigations that miss fall back to the cached sites page. OSM street tiles are
+// not cached, so offline they simply fail and the bundled basemap shows instead.
+self.addEventListener("fetch", (e) => {
+  const req = e.request;
+  if (req.method !== "GET") return;
+  e.respondWith(
+    caches.match(req).then((hit) =>
+      hit || fetch(req).catch(() => {
+        if (req.mode === "navigate") return caches.match("{{ '/index.html' | url }}");
+        return Response.error();
+      })
+    )
+  );
+});
