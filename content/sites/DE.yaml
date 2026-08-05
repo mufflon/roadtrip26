@@ -1,0 +1,228 @@
+- id: dresden-mhm
+  name: Militärhistorisches Museum der Bundeswehr
+  country: DE
+  lat: 51.0785265
+  lng: 13.7599555
+  placeId: ChIJY2yEtSbPCUcRbBvGDuzqlHc
+  tier: core
+  wikipedia: Bundeswehr_Military_History_Museum
+  hoursVerified: true
+  era: Survey, medieval to present
+  eraSort: 1500
+  hours: Mon 10:00–21:00. Tue, Thu–Sun 10:00–18:00. CLOSED WEDNESDAYS.
+  closedDays:
+    - 3
+  duration: 3–4 h
+  fee: EUR 5
+  url: https://www.mhmbw.de/
+  note: Libeskind wedge through the old arsenal. Free parking on site. Some display cases are very dimly lit.
+- id: halle
+  name: Landesmuseum für Vorgeschichte (Nebra Sky Disc)
+  country: DE
+  lat: 51.4980415
+  lng: 11.962554
+  placeId: ChIJM9fROVR7pkcRbxskbFogHzA
+  tier: core
+  wikipedia: Nebra_sky_disc
+  hoursVerified: true
+  era: Bronze Age, c. 1600 BCE
+  eraSort: -1600
+  hours: Tue–Fri 09:00–17:00. Sat–Sun 10:00–18:00. CLOSED MONDAYS.
+  closedDays:
+    - 1
+  duration: 2 h
+  fee: EUR 12
+  url: https://www.landesmuseum-vorgeschichte.de/en/
+  note: Parking at the museum is very limited; use the centre and tram 7. Book a timed slot. Labelling is mostly German only.
+- id: gross-raden
+  name: Archäologisches Freilichtmuseum Groß Raden
+  country: DE
+  lat: 53.7376987
+  lng: 11.8780756
+  placeId: ChIJs8ywZkIxrEcRdM4dLFD3Zpw
+  tier: core
+  wikipedia: Gro%C3%9F_Raden_Archaeological_Open_Air_Museum
+  hoursVerified: true
+  era: Slavic, 9th–10th c.
+  eraSort: 900
+  hours: Daily 10:00–17:30.
+  closedDays: []
+  duration: 1.5–2 h
+  fee: c. EUR 3.50
+  url: http://www.freilichtmuseum-gross-raden.de/
+  note: Reconstructed fort and temple on the excavated site, plus a treasury of the best Slavic-period finds. Dogs allowed on the grounds but not in the exhibition.
+- id: goseck
+  name: Sonnenobservatorium Goseck
+  country: DE
+  lat: 51.1982038
+  lng: 11.8646631
+  placeId: ChIJfdCrAO-QpkcRHo7wMBN5XAU
+  tier: want
+  wikipedia: Goseck_circle
+  hoursVerified: true
+  era: c. 4900 BCE
+  eraSort: -4900
+  hours: Open site, always accessible.
+  closedDays: []
+  duration: 45 min
+  fee: Free
+  url: https://www.sonnenobservatorium-goseck.info/
+  note: Reconstructed neolithic ring with solstice-aligned gateways. Visually plainer than Pömmelte. Short walk from the car park.
+- id: naumburg
+  name: Naumburger Dom
+  country: DE
+  lat: 51.1547586
+  lng: 11.8039992
+  placeId: ChIJd8akuOiZpkcR0ihSXQ-_F9Q
+  tier: want
+  wikipedia: Naumburg_Cathedral
+  hoursVerified: true
+  era: from 1213
+  eraSort: 1250
+  hours: Mon–Sat 09:00–18:00. Sun 12:00–18:00.
+  closedDays: []
+  duration: 1–1.5 h
+  fee: Moderate, audio guide included
+  url: https://www.naumburger-dom.de/
+  note: UNESCO. The Naumburg Master's donor figures, including Uta von Ballenstedt. 20 minutes from Goseck, so the two pair into one half day.
+- id: gorlitz
+  name: Görlitz, Untermarkt
+  country: DE
+  lat: 51.1562456
+  lng: 14.9903287
+  placeId: ChIJB3AKJTrcCEcRhOiZc2dzyR8
+  tier: maybe
+  wikipedia: G%C3%B6rlitz
+  hoursVerified: true
+  era: Gothic to 1900 townscape
+  eraSort: 1400
+  hours: Townscape, any time.
+  closedDays: []
+  duration: Half a day
+  fee: Free
+  url: http://www.goerlitz.de/
+  note: Old town essentially undamaged by the war. 100 km east of Dresden, so it wants an overnight rather than a detour. Walk the bridge into Zgorzelec.
+- id: magdeburg
+  name: Kulturhistorisches Museum Magdeburg
+  country: DE
+  lat: 52.1254878
+  lng: 11.6296724
+  placeId: ChIJA_A0-_b1pUcRoBc5BJrodkA
+  tier: maybe
+  wikipedia: Kulturhistorisches_Museum_Magdeburg
+  hoursVerified: true
+  era: Ottonian onward
+  eraSort: 950
+  hours: Tue–Fri 10:00–17:00. Sat–Sun 10:00–18:00. CLOSED MONDAYS.
+  closedDays:
+    - 1
+  duration: 2 h
+  fee: Moderate
+  url: https://www.khm-magdeburg.de/
+  note: The Magdeburg Rider, the 1631 sack, and the city history. Otto I's tomb is in the cathedral, a separate walk away.
+- id: peenemunde
+  name: Historisch-Technisches Museum Peenemünde
+  country: DE
+  lat: 54.1379841
+  lng: 13.7692117
+  placeId: ChIJq9gJWAMFq0cRJmt2TJB4-jE
+  tier: maybe
+  wikipedia: Peenem%C3%BCnde
+  hoursVerified: true
+  era: 1936–1945
+  eraSort: 1943
+  hours: Daily 10:00–18:00.
+  closedDays: []
+  duration: 2.5–3 h
+  fee: EUR 13.50, plus 2.50 audio guide and 1.50 for the roof platform
+  url: http://www.museum-peenemuende.de/
+  note: V-1 and V-2 development site in the former power station. About 200 km east of Rostock, so it is a full extra day.
+- id: brandenburg-archaeology
+  name: Archäologisches Landesmuseum Brandenburg (Paulikloster)
+  country: DE
+  lat: 52.4063538
+  lng: 12.5623658
+  placeId: ChIJdTgtxVvAqEcRsuvvlILK3nM
+  tier: want
+  wikipedia:
+    de: Arch%C3%A4ologisches_Landesmuseum_Brandenburg_im_Paulikloster
+  hoursVerified: true
+  era: Survey, 130,000 BP to modern
+  eraSort: -120000
+  hours: Tue–Sun 10:00–17:00. CLOSED MONDAYS.
+  closedDays:
+    - 1
+  duration: 2 h
+  fee: EUR 5, family EUR 10
+  url: https://www.landesmuseum-brandenburg.de/
+  note: ~10,000 objects over nine rooms, including the oldest carrying net in the world. Housed in a 1286–1497 Dominican brick Gothic complex. German labelling only.
+- id: brandenburg-industry
+  name: Industriemuseum Brandenburg an der Havel
+  country: DE
+  lat: 52.4165013
+  lng: 12.5056135
+  placeId: ChIJm686i9HAqEcRLsESLiz-CHQ
+  tier: want
+  wikipedia:
+    de: Industriemuseum_Brandenburg_an_der_Havel
+  hoursVerified: true
+  era: Steel, 20th c.
+  eraSort: 1910
+  hours: Tue–Fri 09:00–16:00. Sat–Sun 10:00–16:00. CLOSED MONDAYS.
+  closedDays:
+    - 1
+  duration: 2 h
+  fee: Moderate
+  url: https://www.industriemuseum-brandenburg.de/
+  note: Last preserved Siemens-Martin open-hearth furnace in Europe, walked in coat and helmet. Audio guide in English and French. Plus the Brennabor exhibition.
+- id: arche-nebra
+  name: Arche Nebra
+  country: DE
+  lat: 51.2716191
+  lng: 11.5312823
+  placeId: ChIJO0CuFQ8mpEcR5UhJBk7h-yI
+  tier: enroute
+  wikipedia: Nebra_sky_disc
+  hoursVerified: true
+  era: Bronze Age, c. 1600 BCE
+  eraSort: -1600
+  hours: Daily 10:00–18:00.
+  closedDays: []
+  duration: 1.5–2 h with the planetarium
+  fee: c. EUR 9.50
+  url: http://www.himmelsscheibe-erleben.de/
+  note: Findspot visitor centre, planetarium and a 30 m tower on the Mittelberg. Effectively German only. The Disc itself is in Halle, so this is context, not object.
+- id: poemmelte
+  name: Ringheiligtum Pömmelte
+  country: DE
+  lat: 51.997043
+  lng: 11.7996705
+  placeId: ChIJDZe-lL37pUcR3435QXOpfAw
+  tier: enroute
+  wikipedia: P%C3%B6mmelte
+  hoursVerified: true
+  era: c. 2300 BCE
+  eraSort: -2300
+  hours: Open site, always accessible.
+  closedDays: []
+  duration: 45 min
+  fee: Free
+  url: http://www.ringheiligtum-poemmelte.de/
+  note: Reconstructed timber ring with a raised viewing point. Visually the stronger of the two henges. Best at low sun.
+- id: rostock-ferry
+  name: Scandlines check-in, Rostock Überseehafen
+  country: DE
+  lat: 54.14578
+  lng: 12.1004601
+  placeId: ChIJaV0fIABXrEcRTs3afQ_o3QQ
+  tier: enroute
+  wikipedia: Scandlines
+  hoursVerified: true
+  era: null
+  eraSort: null
+  hours: Up to 12 sailings a day, roughly every 2–3 h. Crossing about 2 h.
+  closedDays: []
+  duration: Vehicle check-in closes 15 minutes before departure
+  fee: Book ahead in August
+  url: https://www.scandlines.com/
+  note: Gedser side is 270 km and about 3 h from Lund via Falster, Zealand and the Öresund bridge. Charging on that corridor at Nykøbing Falster and Køge.

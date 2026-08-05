@@ -1,0 +1,120 @@
+- id: banska-stiavnica
+  name: Starý zámok, Banská Štiavnica
+  country: SK
+  lat: 48.459336
+  lng: 18.8915152
+  placeId: ChIJm99YqGAzFUcRKIi15tqR-To
+  tier: want
+  wikipedia: Bansk%C3%A1_%C5%A0tiavnica
+  hoursVerified: true
+  era: 13th c. church, 16th c. fortress
+  eraSort: 1550
+  hours: Daily 10:00–18:00.
+  closedDays: []
+  duration: 1 h, half a day for the town
+  fee: Low
+  url: https://www.muzeumbs.sk/sk/stary-zamok
+  note: UNESCO silver-mining town. The open-air mining museum is a separate site. Sitno trailhead is 20 minutes away.
+- id: gerulata
+  name: Antická Gerulata, Bratislava-Rusovce
+  country: SK
+  lat: 48.0558172
+  lng: 17.1491349
+  placeId: ChIJXSxntbVibEcR5De47rQkvKI
+  tier: maybe
+  wikipedia: Gerulata
+  hoursVerified: true
+  era: Roman, 1st–4th c. CE
+  eraSort: 100
+  hours: Tue–Sun 10:00–18:00. CLOSED MONDAYS.
+  closedDays:
+    - 1
+  duration: 45 min
+  fee: EUR 4
+  url: https://muzeumbratislava.sk/anticka-gerulata
+  note: 'UNESCO Danube Limes. Small: mostly wall footings plus a modern exhibition. Kelemantia is more atmospheric, Carnuntum far bigger.'
+- id: bratislava-castle
+  name: Bratislavský hrad (Celtic and Roman levels)
+  country: SK
+  lat: 48.1421086
+  lng: 17.1002348
+  placeId: ChIJxVCxk12JbEcROaEGvO8g0y8
+  tier: maybe
+  wikipedia: Bratislava_Castle
+  hoursVerified: true
+  era: Boii oppidum, 1st c. BCE
+  eraSort: -50
+  hours: Grounds daily 08:00–22:00. Museum closed Mondays.
+  closedDays: []
+  duration: 1 h for the basement exhibition
+  fee: Grounds free, museum ticketed
+  url: https://www.visitbratislava.com/places/bratislava-castle/
+  note: The reason to go is the Celtic settlement and mint plus Roman-era building remains under the castle, not the rebuilt castle itself.
+- id: kelemantia
+  name: Kelemantia, Iža
+  country: SK
+  lat: 47.7448173
+  lng: 18.1989794
+  placeId: ChIJF99MGnhSakcRgcj0D0c9ees
+  tier: enroute
+  wikipedia: Celemantia
+  hoursVerified: true
+  era: Roman, 2nd–4th c. CE
+  eraSort: 150
+  hours: Open site, always accessible.
+  closedDays: []
+  duration: 45 min
+  fee: Free
+  url: http://www.archeol.sav.sk/kelemantia/
+  note: Bridgehead fort of Brigetio, UNESCO Danube Limes. The access track is rough and badly signed; no shade, no facilities. Partly reconstructed walls and ditches.
+- id: spissky-hrad
+  name: Spišský hrad
+  country: SK
+  lat: 48.998755
+  lng: 20.770211
+  placeId: null
+  tier: want
+  wikipedia: Spi%C5%A1_Castle
+  hoursVerified: false
+  era: 13th c., first mentioned 1120
+  eraSort: 1250
+  hours: Closes entirely in bad weather. Verify summer hours.
+  closedDays: []
+  duration: 2 h
+  fee: Moderate
+  url: https://www.snm.sk/muzea-snm/spisske-muzeum/spissky-hrad/
+  note: One of the largest castle complexes in central Europe, UNESCO with Žehra, Spišská Kapitula and Levoča. Fully exposed on its ridge.
+- id: levoca
+  name: Chrám sv. Jakuba, Levoča
+  country: SK
+  lat: 49.026441
+  lng: 20.588651
+  placeId: null
+  tier: want
+  wikipedia: Levo%C4%8Da
+  hoursVerified: false
+  era: Altar c. 1510
+  eraSort: 1510
+  hours: Verify. Entry is by timed slot in season.
+  closedDays: []
+  duration: 1 h
+  fee: Moderate
+  url: null
+  note: Master Pavol's altarpiece, the tallest late-Gothic wooden altar in the world at 18.6 m. 25 km from Podlesok.
+- id: dobsinska
+  name: Dobšinská ľadová jaskyňa
+  country: SK
+  lat: 48.874178
+  lng: 20.302646
+  placeId: null
+  tier: want
+  wikipedia: Dob%C5%A1insk%C3%A1_Ice_Cave
+  hoursVerified: true
+  era: Ice possibly from the Riss glaciation
+  eraSort: -200000
+  hours: Season ends 15 September. Regular entries need a minimum of 4 people.
+  closedDays: []
+  duration: 1.5 h including the approach
+  fee: EUR 14
+  url: https://www.ssj.sk/sk/jaskyna/6-dobsinska-ladova-jaskyna
+  note: UNESCO since 2000. 1 km approach trail with 130 m of ascent, about 25 minutes. Take warm clothing. No catering on site in the afternoon.

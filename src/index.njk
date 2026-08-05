@@ -1,0 +1,138 @@
+---
+layout: layout.njk
+permalink: "/index.html"
+title: "Sites — Budapest → Rostock, Aug 2026"
+description: "Filterable list of historical sites for a Budapest–Rostock drive. No itinerary, just candidates and a map."
+pageScript: "/assets/app-sites.js"
+---
+
+<section class="intro">
+  <h1>Historical sites</h1>
+  <p>Candidates between Budapest and the Rostock ferry. Nothing here is hidden by the
+     controls — they change emphasis and order only. <strong>There is no plan.</strong></p>
+</section>
+
+<section class="controls" aria-label="Filters and sorting">
+  <div class="controls__group" data-control="tier">
+    <span class="controls__label">Tier</span>
+    <div class="chips">
+      {% for tier in sites.TIERS %}
+      <label class="chip chip--tier">
+        <input type="checkbox" name="tier" value="{{ tier.id }}" checked>
+        <span class="chip__swatch" style="--c: {{ tier.colour }}"></span>
+        <span class="chip__text">{{ tier.letter }} · {{ tier.label }}</span>
+      </label>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="controls__group" data-control="country">
+    <span class="controls__label">Country</span>
+    <div class="chips">
+      {% for c in ["HU", "SK", "CZ", "DE"] %}
+      <label class="chip">
+        <input type="checkbox" name="country" value="{{ c }}" checked>
+        <span class="chip__text">{{ c }}</span>
+      </label>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="controls__group" data-control="weekday">
+    <label class="controls__label" for="weekday">Thinking about a…</label>
+    <select id="weekday" name="weekday">
+      <option value="">any day</option>
+      <option value="1">Monday</option>
+      <option value="2">Tuesday</option>
+      <option value="3">Wednesday</option>
+      <option value="4">Thursday</option>
+      <option value="5">Friday</option>
+      <option value="6">Saturday</option>
+      <option value="0">Sunday</option>
+    </select>
+    <span class="controls__provenance">Hours checked {{ sites.HOURS_CHECKED }}</span>
+  </div>
+
+  <div class="controls__group" data-control="sort">
+    <label class="controls__label" for="sort">Sort</label>
+    <select id="sort" name="sort">
+      <option value="tier">Tier, then south → north</option>
+      <option value="era">Era, oldest first</option>
+    </select>
+  </div>
+
+  <div class="controls__group controls__group--actions">
+    <output id="matchcount" class="matchcount">{{ sites.SITES | length }} of {{ sites.SITES | length }} match</output>
+    <button type="button" id="download-kml" class="btn btn--ghost">Download KML</button>
+  </div>
+</section>
+
+<div class="board">
+  <div class="listwrap">
+    <ol class="list" id="list">
+      {% for site in sites.SITES %}
+      <li>
+        <article class="row" id="site-{{ site.id }}" tabindex="-1"
+                 data-id="{{ site.id }}"
+                 data-tier="{{ site.tier }}"
+                 data-tierorder="{{ site.tierOrder }}"
+                 data-country="{{ site.country }}"
+                 data-code="{{ site.code }}"
+                 data-closeddays="{{ site.closedDays | join(',') if site.closedDays else '' }}"
+                 data-hoursverified="{{ 'true' if site.hoursVerified else 'false' }}"
+                 data-erasort="{{ site.eraSort if site.eraSort is not none else '' }}"
+                 data-hascoords="{{ 'true' if site.hasCoords else 'false' }}"
+                 {% if site.hasCoords %}data-lat="{{ site.lat }}" data-lng="{{ site.lng }}"{% endif %}>
+          <div class="row__erarail" aria-hidden="true">{% if site.era %}{{ site.era }}{% endif %}</div>
+          <div class="row__code" style="--tier: {{ site.tierColour }}">{{ site.code }}</div>
+          <div class="row__body">
+            <h2 class="row__name">
+              {{ site.name }}
+              {% if site.country %}<span class="row__country">{{ site.country }}</span>{% endif %}
+            </h2>
+            <div class="row__meta">
+              {% if site.era %}<span>{{ site.era }}</span>{% endif %}
+              {% if site.duration %}<span>{{ site.duration }}</span>{% endif %}
+              {% if site.fee %}<span>{{ site.fee }}</span>{% endif %}
+            </div>
+            {% if site.hours %}<div class="row__hours">{{ site.hours }}</div>{% endif %}
+
+            <div class="row__warn" data-warn>
+              {% if not site.hoursVerified %}
+              <span class="chip-warn chip-warn--unverified">Hours not confirmed — check before you go</span>
+              {% endif %}
+              {% if not site.hasCoords %}
+              <span class="chip-warn chip-warn--nocoords">No location yet</span>
+              {% elif site.coordsApprox %}
+              <span class="chip-warn chip-warn--approx">Approximate location</span>
+              {% endif %}
+            </div>
+
+            {% if site.note %}<p class="row__note">{{ site.note }}</p>{% endif %}
+
+            <div class="row__actions">
+              {% if site.maps %}
+              <a class="btn btn--primary" href="{{ site.maps.open }}" target="_blank" rel="noopener">Open in Maps</a>
+              <a class="btn" href="{{ site.maps.dir }}" target="_blank" rel="noopener">Directions</a>
+              <button type="button" class="btn btn--copy" data-copy="{{ site.maps.open }}">Copy link</button>
+              <span class="copyok" data-copyok hidden>Copied</span>
+              {% endif %}
+              {% if site.url %}
+              <a class="btn btn--link" href="{{ site.url }}" target="_blank" rel="noopener">Official site</a>
+              {% endif %}
+              {% for w in site.wiki %}
+              <a class="btn btn--link" href="{{ w.url }}" target="_blank" rel="noopener">{{ w.label }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </article>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+
+  <section class="mapwrap" aria-label="Map of sites">
+    <div id="map" class="map" data-json="{{ '/sites.json' | url }}"></div>
+    <p id="map-status" class="map-status" role="status" hidden></p>
+  </section>
+</div>

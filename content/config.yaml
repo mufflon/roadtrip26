@@ -1,0 +1,27 @@
+hoursChecked: '2026-08-05'
+tiers:
+  - id: core
+    letter: A
+    label: Will not miss
+    order: 1
+    colour: '#c8a13a'
+  - id: want
+    letter: B
+    label: Don't want to miss
+    order: 2
+    colour: '#3f8f7d'
+  - id: maybe
+    letter: C
+    label: Might miss
+    order: 3
+    colour: '#5b7f9c'
+  - id: enroute
+    letter: D
+    label: En route, cheap adds
+    order: 4
+    colour: '#7d8b93'
+excludedTrails:
+  - name: Ferrata HZS Kyseľ, Slovenský raj
+    reason: A genuine via ferrata. Harness and lanyard required.
+  - name: Jánošíkove diery and Veľký Rozsutec, Malá Fatra
+    reason: Chains and ladders throughout.

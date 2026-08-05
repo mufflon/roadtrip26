@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0e2b2b">
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+
+  <link rel="stylesheet" href="{{ '/assets/style.css' | url }}">
+
+  <!-- Leaflet 1.9.4 from CDN. Deferred so it never blocks the list rendering;
+       the page is fully usable if these fail to load. -->
+  <link rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin="">
+  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+          crossorigin=""></script>
+  <script type="module" src="{{ pageScript | url }}"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar__brand">
+      <span class="topbar__title">Budapest → Rostock</span>
+      <span class="topbar__sub">August 2026 · pick as you go</span>
+    </div>
+    <nav class="topbar__nav" aria-label="Primary">
+      <a href="{{ '/' | url }}"
+         {% if page.url == ('/' | url) %}aria-current="page"{% endif %}>Sites</a>
+      <a href="{{ '/trails.html' | url }}"
+         {% if page.url == ('/trails.html' | url) %}aria-current="page"{% endif %}>Trails</a>
+    </nav>
+  </header>
+
+  <main id="main" class="layout">
+    {{ content | safe }}
+  </main>
+
+  <footer class="sitefoot">
+    <p>
+      Map data © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>
+      contributors. Tiles from OpenStreetMap. Not a plan — a list of candidates.
+    </p>
+    <p class="sitefoot__note">
+      Opening hours are a snapshot, not a guarantee. Always check before you go.
+    </p>
+  </footer>
+</body>
+</html>

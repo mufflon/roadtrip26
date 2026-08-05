@@ -1,0 +1,107 @@
+---
+layout: layout.njk
+permalink: "/trails.html"
+title: "Trails — Budapest → Rostock, Aug 2026"
+description: "Candidate Slovak day hikes, compared against the four constraints: ~20 km, a circuit, no equipment, one day."
+pageScript: "/assets/app-trails.js"
+---
+
+<section class="intro">
+  <h1>Slovak day hikes</h1>
+  <p>Compared against four constraints: about 20&nbsp;km, a circuit back to the car,
+     no fixed aids needing equipment, one day. Only two candidates meet all four —
+     the rest show which constraint they fail.</p>
+</section>
+
+<div class="board">
+  <div class="listwrap">
+    <ol class="list list--trails" id="list">
+      {% for trail in trails.TRAILS %}
+      <li>
+        <article class="card" id="trail-{{ trail.id }}" tabindex="-1"
+                 data-id="{{ trail.id }}"
+                 data-code="{{ trail.code }}"
+                 {% if trail.pin %}data-lat="{{ trail.pin.lat }}" data-lng="{{ trail.pin.lng }}"{% endif %}
+                 data-hascoords="{{ 'true' if trail.pin else 'false' }}">
+          <header class="card__head">
+            <div class="row__code row__code--trail" style="--tier: #3f8f7d">{{ trail.code }}</div>
+            <div>
+              <h2 class="card__name">{{ trail.name }}</h2>
+              {% if trail.range %}<div class="card__range">{{ trail.range }}</div>{% endif %}
+            </div>
+          </header>
+
+          <dl class="stats">
+            {% if trail.distanceKm %}<div><dt>Distance</dt><dd>{{ trail.distanceKm }} km</dd></div>{% endif %}
+            {% if trail.ascentM %}<div><dt>Ascent</dt><dd>{{ trail.ascentM }} m</dd></div>{% endif %}
+            {% if trail.timeH %}<div><dt>Time</dt><dd>{{ trail.timeH }} h</dd></div>{% endif %}
+            <div><dt>Circuit</dt><dd>{{ "Yes" if trail.circuit else "No" }}</dd></div>
+            {% if trail.driveFromBudapest %}<div><dt>From Budapest</dt><dd>{{ trail.driveFromBudapest }}</dd></div>{% endif %}
+          </dl>
+
+          <div class="card__flags">
+            {% set hw = { "none": 0, "steps": 1, "ladders": 2, "ferrata": 3 } %}
+            {% set level = hw[trail.hardware] if trail.hardware else 0 %}
+            <div class="hardware hardware--{{ trail.hardware or 'none' }}" title="Hardware: {{ trail.hardware or 'none' }}">
+              <span class="hardware__label">Hardware</span>
+              <span class="hardware__scale" aria-hidden="true">
+                {% for i in [0, 1, 2, 3] %}<span class="hardware__pip {{ 'is-on' if i <= level else '' }}"></span>{% endfor %}
+              </span>
+              <span class="hardware__name">{{ trail.hardware or "none" }}</span>
+            </div>
+
+            {% if trail.oneWay %}
+            <span class="chip-warn chip-warn--oneway">Ascent-only — the gorges cannot be down-climbed, so you are committed once in</span>
+            {% endif %}
+            {% if trail.pin and trail.pin.isFallback %}
+            <span class="chip-warn chip-warn--approx">Pin is a stand-in ({{ trail.pin.label }}) — refine the trailhead</span>
+            {% elif trail.pin and trail.coordsApprox %}
+            <span class="chip-warn chip-warn--approx">Approximate trailhead</span>
+            {% elif not trail.pin %}
+            <span class="chip-warn chip-warn--nocoords">No location yet</span>
+            {% endif %}
+          </div>
+
+          {% if trail.trailhead %}<p class="card__trailhead"><strong>Trailhead:</strong> {{ trail.trailhead }}</p>{% endif %}
+          {% if trail.route %}<p class="card__route"><strong>Route:</strong> {{ trail.route }}</p>{% endif %}
+          {% if trail.route_note %}<p class="card__route-note">{{ trail.route_note }}</p>{% endif %}
+          {% if trail.note %}<p class="row__note">{{ trail.note }}</p>{% endif %}
+          {% if trail.verdict %}<p class="card__verdict">{{ trail.verdict }}</p>{% endif %}
+
+          {% if trail.bailout %}
+          <p class="card__bailout">Bail-out: <a href="#trail-{{ trail.bailout }}" data-jump="trail-{{ trail.bailout }}">the {{ trail.bailout }} route</a></p>
+          {% endif %}
+
+          <div class="row__actions">
+            {% if trail.maps %}
+            <a class="btn btn--primary" href="{{ trail.maps.open }}" target="_blank" rel="noopener">Open in Maps</a>
+            <a class="btn" href="{{ trail.maps.dir }}" target="_blank" rel="noopener">Directions</a>
+            <button type="button" class="btn btn--copy" data-copy="{{ trail.maps.open }}">Copy link</button>
+            <span class="copyok" data-copyok hidden>Copied</span>
+            {% endif %}
+            {% for w in trail.wiki %}
+            <a class="btn btn--link" href="{{ w.url }}" target="_blank" rel="noopener">{{ w.label }}</a>
+            {% endfor %}
+          </div>
+        </article>
+      </li>
+      {% endfor %}
+    </ol>
+
+    {% if trails.EXCLUDED and trails.EXCLUDED.length %}
+    <footer class="excluded">
+      <h2>Explicitly excluded</h2>
+      <ul>
+        {% for x in trails.EXCLUDED %}
+        <li><strong>{{ x.name }}</strong> — {{ x.reason }}</li>
+        {% endfor %}
+      </ul>
+    </footer>
+    {% endif %}
+  </div>
+
+  <section class="mapwrap" aria-label="Map of trailheads">
+    <div id="map" class="map" data-json="{{ '/trails.json' | url }}"></div>
+    <p id="map-status" class="map-status" role="status" hidden></p>
+  </section>
+</div>

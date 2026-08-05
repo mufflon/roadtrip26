@@ -1,0 +1,159 @@
+- id: pavlov
+  name: Archeopark Pavlov
+  country: CZ
+  lat: 48.8772918
+  lng: 16.6747329
+  placeId: ChIJjQFJWdDNEkcR7k6_venEGYQ
+  tier: core
+  wikipedia: Pavlovian_culture
+  hoursVerified: true
+  era: Gravettian, c. 30,000 BP
+  eraSort: -28000
+  hours: Tue–Sun 09:00–18:00 in August. Last entry 17:30.
+  closedDays:
+    - 1
+  duration: 1.5–2 h
+  fee: 150 CZK
+  url: https://www.archeoparkpavlov.cz/en
+  note: Mammoth-hunter settlement, museum sunk into the original find layers. The 4 km Archeostezka trail links the Dolní Věstonice sites.
+- id: austerlitz
+  name: Mohyla míru (Austerlitz battlefield)
+  country: CZ
+  lat: 49.12817
+  lng: 16.7625159
+  placeId: ChIJBWnD3vvpEkcRz7IZqD5Tzmc
+  tier: core
+  wikipedia: Battle_of_Austerlitz
+  hoursVerified: true
+  era: '1805'
+  eraSort: 1805
+  hours: Daily 09:00–18:00.
+  closedDays: []
+  duration: 1 h, plus the battlefield
+  fee: Low
+  url: http://mohylamiru.muzeumbrnenska.cz/
+  note: Cairn of Peace on the Prace hill. Žuráň (Napoleon's command post) and the Svíb wood are separate short stops nearby.
+- id: lesany
+  name: Vojenské technické muzeum Lešany
+  country: CZ
+  lat: 49.854981
+  lng: 14.544397
+  placeId: ChIJkcNnu4mDC0cRDVLyoRFxGi0
+  tier: core
+  wikipedia: Military_Technical_Museum_Le%C5%A1any
+  hoursVerified: true
+  era: 1890–present
+  eraSort: 1940
+  hours: Tue–Sun 09:30–17:30 in August. CLOSED MONDAYS.
+  closedDays:
+    - 1
+  duration: 3–4 h
+  fee: Free
+  url: https://www.vhu.cz/en/the-military-technical-museum-lesany/
+  note: 350+ vehicles across ten halls and six shelters, including the Škoda gun collection. Tank Day is the last Saturday in August. No food on site.
+- id: rokycany
+  name: Vojenské muzeum na demarkační linii
+  country: CZ
+  lat: 49.7270659
+  lng: 13.5859538
+  placeId: ChIJPUADIKf8CkcRn9IuX0vKDrA
+  tier: core
+  wikipedia:
+    cs: Vojensk%C3%A9_muzeum_na_demarka%C4%8Dn%C3%AD_linii
+  hoursVerified: true
+  era: 1918–1945, and the Cold War
+  eraSort: 1945
+  hours: Daily 09:00–17:00 in August.
+  closedDays: []
+  duration: 2–3 h
+  fee: 190 CZK, family 450 CZK
+  url: https://vojenskemuzeumrokycany.cz/
+  note: Largest non-state military museum in Czechia. ~150 mostly running vehicles, relocated 1938 border bunkers, underground galleries. Five minutes off the D5, free car park. Stands on the actual 1945 demarcation line.
+- id: patton
+  name: Patton Memorial Pilsen
+  country: CZ
+  lat: 49.7499997
+  lng: 13.3735725
+  placeId: ChIJDzNOkvDxCkcRqLKyRQQHrk0
+  tier: core
+  wikipedia: '%C5%A0koda_Works'
+  hoursVerified: false
+  era: '1945'
+  eraSort: 1945
+  hours: Check before travelling.
+  closedDays: []
+  duration: 1 h
+  fee: c. 100 CZK
+  url: http://www.patton-memorial.cz/
+  note: US liberation of Plzeň, told over 20 panels in Czech and English. Small. A bonus on the Rokycany day rather than a reason to come.
+- id: josefov
+  name: Pevnost Josefov, Jaroměř
+  country: CZ
+  lat: 50.338465
+  lng: 15.924256
+  placeId: null
+  tier: want
+  wikipedia: Josefov_Fortress
+  hoursVerified: false
+  era: 1780s
+  eraSort: 1780
+  hours: Underground galleries are toured from the visitor centre. Check times.
+  closedDays: []
+  duration: 2 h
+  fee: Low
+  url: https://www.pevnostjosefov.cz/en/
+  note: Bastion I visitor centre, where the underground gallery tours start. Habsburg fortress town with kilometres of galleries. 25 km from Chlum.
+- id: anthropos
+  name: Pavilon Anthropos, Brno
+  country: CZ
+  lat: 49.1920669
+  lng: 16.5670458
+  placeId: ChIJ13KMLS2UEkcRjXFGpTAN-cs
+  tier: want
+  wikipedia: Anthropos_Pavilion
+  hoursVerified: true
+  era: Palaeolithic
+  eraSort: -28000
+  hours: Wed–Fri 09:00–17:00. Sat–Sun 10:00–17:00. CLOSED MONDAY AND TUESDAY.
+  closedDays:
+    - 1
+    - 2
+  duration: 1.5 h
+  fee: Low
+  url: http://www.mzm.cz/
+  note: Two closed days, the tightest constraint on the whole list. Palaeolithic and mammoth material; the natural pairing with Pavlov. Mostly Czech labelling.
+- id: chlum
+  name: Muzeum války 1866, Chlum
+  country: CZ
+  lat: 50.2784176
+  lng: 15.7408844
+  placeId: ChIJc0IxYASCDkcR84yDaro6a0I
+  tier: want
+  wikipedia: Battle_of_K%C3%B6niggr%C3%A4tz
+  hoursVerified: true
+  era: '1866'
+  eraSort: 1866
+  hours: Tue–Sun 10:00–18:00. CLOSED MONDAYS.
+  closedDays:
+    - 1
+  duration: 1 h, plus the tower and the Svíb wood
+  fee: Low
+  url: https://www.muzeumhk.cz/muzeum-valky-1866/zakladni-info-muzeum-valky-1866.html
+  note: Königgrätz. Museum is small, 30–45 min; the lookout tower and a walk in the Svíb wood are the point. Czech, English and German panels.
+- id: terezin
+  name: Památník Terezín
+  country: CZ
+  lat: 50.5086809
+  lng: 14.1520113
+  placeId: ChIJLZbnnEt-CUcREyL3geu3-oI
+  tier: want
+  wikipedia: Theresienstadt_Ghetto
+  hoursVerified: true
+  era: 1780s fortress, 1941–45 ghetto
+  eraSort: 1942
+  hours: Daily 09:00–17:00. Everything shuts at 17:00.
+  closedDays: []
+  duration: Half a day
+  fee: One ticket covers the Small Fortress and the town museums
+  url: http://www.pamatnik-terezin.cz/
+  note: Directly on the Prague–Dresden road. The town museums, especially the children's drawings, are as important as the Small Fortress.

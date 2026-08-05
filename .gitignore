@@ -1,0 +1,7 @@
+node_modules/
+_site/
+.DS_Store
+
+# Generated from content/*.yaml by tools/build-data.mjs — never edit by hand.
+data/sites.js
+data/trails.js

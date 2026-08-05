@@ -1,0 +1,154 @@
+- id: sitno-tajchy
+  name: Sitno and the Piarg reservoirs
+  wikipedia: Sitno
+  range: Štiavnické vrchy
+  trailhead: Počúvadlianske jazero car park
+  lat: 48.4075
+  lng: 18.854444
+  placeId: ChIJ8fNah6XNakcReQuq-jbWBnY
+  coordsApprox: false
+  distanceKm: 20–22
+  ascentM: c. 800
+  timeH: 6–7
+  circuit: true
+  hardware: steps
+  oneWay: false
+  fee: None. Paid parking at the lake.
+  driveFromBudapest: 225 km, c. 3h00
+  driveOnwardToPavlov: 300 km, c. 3h15
+  meetsBrief: true
+  route: Take the 15 km variant of the Piarg water-system trail from the Veľké Richňavské dam, along the main Richňava channel to the Hodruša adit, over the Bakomi reservoir and along the mining channels towards Počúvadlo. Add Sitno (1,009 m) from the lake and return on the yellow Sitniansky okruh.
+  note: The only option that fits a single day. Forest, reservoirs and 18th-century water engineering rather than ridgeline. Free castle ruin and lookout on the summit. The direct blue approach from the lake climbs steeply via Tatárska lúka on steps and rock; the yellow via Vlčia jama is longer and gentler.
+  verdict: Best fit. Zero detour if you are sleeping in Banská Štiavnica.
+- id: mala-fatra-ridge
+  name: Krivánska Malá Fatra main ridge
+  wikipedia: Mal%C3%A1_Fatra
+  range: Malá Fatra
+  trailhead: Chata Vrátna car park, Vrátna dolina
+  lat: 49.1876
+  lng: 19.0436
+  placeId: null
+  coordsApprox: true
+  distanceKm: 18–20
+  ascentM: c. 1,300
+  timeH: '7'
+  circuit: true
+  hardware: none
+  oneWay: false
+  fee: Paid parking. National park entry may apply.
+  driveFromBudapest: 425 km, c. 4h30
+  driveOnwardToPavlov: 290 km, c. 3h15
+  meetsBrief: false
+  route: Green up to sedlo za Kraviarskym, Chrapáky, sedlo Bublen, then the red ridge trail west over Pekelník, Veľký Kriváň (1,709 m), Snilovské sedlo, Chleb, Hromové, Steny, Poludňový grúň to Stohové sedlo, then yellow down past Chata na Grúni.
+  note: Best views of the three. The ascent of Veľký Kriváň from Snilovské sedlo is pure trekking with no rocky sections. Chains and ladders in Malá Fatra are on Veľký Rozsutec and in the Jánošíkove diery gorges, neither of which this route touches. The Vrátna cable car to Snilovské sedlo is a genuine bail-out if weather closes in. Terchová is 30 km from Žilina, so you are already on the D1 towards Moravia.
+  verdict: Fails only on the one-day constraint. Needs a night at the trailhead.
+- id: dumbier-chopok
+  name: Ďumbier and Chopok from the south
+  wikipedia: '%C4%8Eumbier'
+  range: Nízke Tatry
+  trailhead: Trangoška car park
+  lat: 48.9249
+  lng: 19.6097
+  placeId: null
+  distanceKm: 16, or 18 with the bat cave spur
+  ascentM: 1,231
+  timeH: '7'
+  circuit: true
+  hardware: none
+  oneWay: false
+  fee: Paid parking.
+  driveFromBudapest: 325 km, c. 4h15
+  driveOnwardToPavlov: 400 km, c. 4h15
+  meetsBrief: false
+  route: Trangoška, Chata generála M. R. Štefánika, Krúpové sedlo, Ďumbier (2,046 m), back to Krúpové sedlo, Demänovské sedlo, Kamenná chata, Chopok (2,024 m), then the Kosodrevina magistrála down.
+  route_note: Jaskyňa mŕtvych netopierov is a short spur off the ascent and needs a booked entry.
+  note: Two 2,000 m summits. The southern route has no cable cars and no chains; the ridge between the peaks is essentially a traverse, with the only real climb being about 260 m onto Chopok. Chopok is one of the windiest places in Slovakia and there is no quick exit from the ridge, so it needs a settled forecast.
+  verdict: Short of 20 km and two days of driving. Weather-dependent.
+- id: slovensky-raj-gorges
+  name: Suchá Belá, Kláštorisko and Prielom Hornádu
+  wikipedia: Slovak_Paradise
+  range: Slovenský raj
+  trailhead: Podlesok, Hrabušice
+  lat: 48.9673
+  lng: 20.388
+  placeId: null
+  distanceKm: 13 core, 20–22 extended
+  ascentM: 600–700
+  timeH: 4h15 moving, 5.5–6 realistically in August
+  circuit: true
+  hardware: ladders
+  oneWay: true
+  fee: Gorge entry charged per gorge, a couple of euros. Paid parking at Podlesok.
+  driveFromBudapest: 360 km via Košice, or c. 335 km via Miskolc and Aggtelek
+  driveOnwardToPavlov: 530 km, c. 6h00
+  meetsBrief: false
+  route: Podlesok (545 m), the Suchá Belá gorge, Suchá Belá vrch (955 m), Pod Vtáčim hrbom, Kláštorisko (770 m), Pod Kláštoriskom, Hrdlo Hornádu, back to Podlesok. For 20 km add a second gorge on the Glac side, Piecky or Veľký Sokol, or walk further east along the Hornád and back.
+  note: 'Gorges are one-way, upward only, which forces the loop. Prielom Hornádu is the single two-way section. Hardware is iron footpegs, short ladders and timber walkways, not sustained vertical pitches: no harness or skills needed, but the exposure is unprotected, the limestone is permanently wet from spray, and once committed you cannot turn back. Suchá Belá is the most visited gorge in the park, so expect to queue at the ladders in August. Be at Podlesok before 09:00. Do not go in the day or two after heavy rain.'
+  bailout: slovensky-raj-klastorisko
+  verdict: Best hiking day of the lot, worst driving. Two nights minimum.
+- id: slovensky-raj-klastorisko
+  name: Kláštorisko circuit (no hardware)
+  wikipedia: Slovak_Paradise
+  range: Slovenský raj
+  trailhead: Podlesok, Hrabušice
+  lat: 48.9673
+  lng: 20.388
+  placeId: null
+  sameTrailheadAs: slovensky-raj-gorges
+  distanceKm: '10.5'
+  ascentM: c. 600
+  timeH: 3.5–4
+  circuit: true
+  hardware: none
+  oneWay: false
+  fee: Paid parking at Podlesok.
+  driveFromBudapest: as above
+  driveOnwardToPavlov: as above
+  meetsBrief: false
+  route: Podlesok to Kláštorisko and back on the forest tracks, avoiding every gorge.
+  note: 'Steep in places but no ladders, pegs or chains anywhere. Same car park as the gorge route, so it works as a same-day switch: walk five minutes to the mouth of Suchá Belá, look at the first ladders, and take this instead if it feels wrong. Ends at the ruined 13th-century Carthusian monastery with a buffet.'
+  verdict: The bail-out, not a destination. Too short on its own.
+- id: sulovske-skaly
+  name: Súľovské skaly
+  wikipedia: S%C3%BA%C4%BEov_Rocks
+  range: Súľovské vrchy
+  trailhead: Súľov castle car park
+  lat: 49.1777123
+  lng: 18.5905797
+  placeId: ChIJ_d_wm2dhFEcRhP8HXqsXl9E
+  coordsApprox: false
+  distanceKm: 10–12
+  ascentM: c. 600
+  timeH: 4–5
+  circuit: true
+  hardware: ladders
+  oneWay: false
+  fee: Parking c. EUR 3, card accepted
+  driveFromBudapest: c. 380 km
+  driveOnwardToPavlov: c. 300 km
+  meetsBrief: false
+  route: Red trail from the car park, Gotická brána, Súľov castle ruin, and back.
+  note: Rock city with a castle ruin, five minutes off the D1 so it works as a break on a driving day rather than a destination.
+  verdict: 'Ruled out: half the distance you want, and the good loop uses ladders.'
+- id: vtacnik
+  name: Vtáčnik
+  wikipedia: Vt%C3%A1%C4%8Dnik
+  range: Vtáčnik
+  trailhead: Píly parking near Kamenec pod Vtáčnikom (approx). Also reachable from Podhradie or Bystričany.
+  lat: 48.645
+  lng: 18.605
+  placeId: null
+  coordsApprox: true
+  distanceKm: 18–20
+  ascentM: c. 900
+  timeH: 6–7
+  circuit: true
+  hardware: none
+  oneWay: false
+  fee: None known
+  driveFromBudapest: c. 250 km, 3h15
+  driveOnwardToPavlov: c. 280 km
+  meetsBrief: true
+  route: Loops to the 1,346 m summit of an extinct andesite volcano.
+  note: The only other thing in range at a similar drive time to Sitno. Has the height but no castle, no UNESCO town, and beech forest most of the way.
+  verdict: Meets the brief on paper, weakest payoff. Would not trade Sitno for it.

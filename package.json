@@ -1,0 +1,17 @@
+{
+  "name": "roadtrip26",
+  "version": "1.0.0",
+  "description": "Static reference site for the Budapest to Rostock driving trip, August 2026.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "data": "node tools/build-data.mjs",
+    "check": "node tools/check-data.mjs",
+    "build": "npm run data && npm run check && eleventy",
+    "start": "npm run data && eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "js-yaml": "^5.2.3"
+  }
+}
